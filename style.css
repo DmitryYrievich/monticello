@@ -539,7 +539,8 @@ ul li a:hover .round-icon {
 }
 
 footer {
-    background: url(Images/Foot.jpeg);
+    background: url(Images/foot.jpeg);
+    background-color: #404C82;
     background-repeat: no-repeat;
     background-size: cover;
 }
