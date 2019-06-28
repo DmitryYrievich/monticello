@@ -1,0 +1,21 @@
+.grid > [class*="width-"] {
+    float: left;
+    padding-left: 10px;
+}
+
+.grid {
+    margin-left: -10px;
+}
+
+.grid + .grid {
+	margin-top: 10px;
+}
+
+[class*="width-"] {
+	width: 100%;
+}
+
+.width-1-2 {
+    width: 50%;
+}
+
