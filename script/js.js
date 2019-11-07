@@ -3,41 +3,41 @@ $(document).ready(function(){
     slidesToShow: 1,
     slidesToScroll: 1,
     dots: true,
-    dotsClass:"we-are__slider-dots",
+    dotsClass: 'we-are__slider-dots',
     autoplay: true,
     autoplaySpeed: 4000,
-    arrows: false
-  // responsive: [
-  //   {
-  //     breakpoint: 768,
-  //     settings: {
-  //       arrows: false,
-  //       centerMode: true,
-  //       centerPadding: '30px',
-  //       slidesToShow: 3
-  //     }
-  //   },
-  //   {
-  //     breakpoint: 480,
-  //     settings: {
-  //       arrows: false,
-  //       centerMode: true,
-  //       centerPadding: '30px',
-  //       slidesToShow: 1
-  //     }
-  //   }
-  // ]
+    arrows: false,
+    responsive: [{
+        breakpoint: 1200,
+        settings: {
+          dots: false,
+        }
+      }]
   });
-});
-$(document).ready(function(){
+
   $('#slider2').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
     dots: true,
     prevArrow: '<div class="news__slider-leftarrow"><i class="fas fa-chevron-down we-are__scroll-arrow"></i></div>',    
     nextArrow: '<div class="news__slider-rightarrow"><i class="fas fa-chevron-down we-are__scroll-arrow"></i></div>',
-    dotsClass: 'news__slider-dots'
-    });
+    dotsClass: 'news__slider-dots',
+    responsive: [
+      {
+        breakpoint: 1355,
+        settings: {
+          arrows: false,
+          }
+        },
+        {  
+        breakpoint: 1220,
+        settings: {
+          slidesToShow: 2,
+          centerMode: true,
+          centerPadding: '0px',
+        }
+      }]
+  });
 }); 
 
 function initMap() {
@@ -218,14 +218,15 @@ var icon = {
     url: 'Images/mapdot.png'
 };
 
-// var map = new google.maps.Map(document.getElementById('map'), {
-//   center: monticello,
-//   zoom: 13
-// });
-
 var marker = new google.maps.Marker({
   position: monticello,
   map: map,
   icon: icon
 });
 };
+
+$(document).ready(function() {
+  $('.inline-svg').click(function() {
+    $('.menu-nav').toggleClass('menu_click');
+  });
+});  
