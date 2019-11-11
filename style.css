@@ -20,6 +20,7 @@
 * {
 	scroll-behavior: smooth;
 }
+
 h4 {
 	margin: 0;
 }
@@ -34,7 +35,6 @@ body {
 	font-family: 'Gotham-bold', sans-serif; 
 	min-width: 920px;
 	font-weight: 600;
-	overflow-x: hidden;
 }
 
 header {
@@ -53,6 +53,7 @@ a{
 	text-decoration: none;
 	color: #fff;
 }
+
 html,body
 {
     width: 100%;
@@ -697,6 +698,14 @@ footer {
 }
 
 @media (max-width: 586px) { 
+
+}
+
+@media (max-width: 768px) { 
+
+}
+
+@media (max-width: 992px) { 
 	.menu-nav {
 		position: absolute;
 		display: none;
@@ -726,15 +735,11 @@ footer {
 		transition: 1s;
 	}
 }
-
-/*@media (max-width: 768px) { 
-
+@media (mix-width: 991px) {
+	.container {
+		width: 600px;
+	} 
 }
-
-@media (max-width: 992px) { 
-
-}*/
-
 @media (max-width: 1200px) {
 	.container {
 		width: 900px;
